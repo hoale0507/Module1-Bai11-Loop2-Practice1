@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+</head>
+<body>
+<button type="button" style="width:200px; height:100px">Chơi</button>
+<!--Khi người dùng nhấn vào button “Chơi”:-->
+<!--Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào-->
+<!--Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn-->
+<!--Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán-->
+<!--Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.-->
+<!--Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi-->
+<!--Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.-->
+<!--Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần-->
+<script>
+let max = parseInt(prompt("Hãy nhập vào số lớn nhất trong khoảng từ 0 mà bạn muốn đoán"));
+let a =   Math.floor(Math.random() * (max+1));
+console.log(a);
+let num = parseInt(prompt("Bạn đoán số nào?"));
+for(let i = 1; i<=2; i++) {
+    if(num == a) {
+        alert("Chúc mừng bạn đã chọn đúng!");
+        break;
+    } else if (num > a) {
+        alert("Bạn cần đoán số nhỏ hơn");
+        num = parseInt(prompt("Bạn đoán số nào"));
+    } else {
+        alert("Bạn cần đoán số lớn hơn");
+        num = parseInt(prompt("Bạn đoán số nào"));
+    }
+}
+alert("Trò chơi kết thúc!");
+// chỗ này muốn hiển thị "Xin lỗi bạn đã nhập 3 lần sai liên tiếp, trò chơi kết thúc" thì đặt ở đâu???
+
+
+</script>
+</body>
+</html>

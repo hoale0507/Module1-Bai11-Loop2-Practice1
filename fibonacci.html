@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    let number1 = 0;
+    console.log("0\n1\n1");
+    let number2 = 1;
+    let number3 = number1 + number2;
+    // let count = 0;
+    let isPrime = true;
+    while (isPrime === true) {
+        number1 = number2;
+        number2 = number3;
+        number3 = number1 + number2;
+        console.log(number3);
+        if(number3%5 === 0) {
+            alert(number3);
+            break;
+        }
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
